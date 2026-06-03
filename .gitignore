@@ -2,3 +2,4 @@ bin/
 out/
 node_modules/
 *.o
+*.exe

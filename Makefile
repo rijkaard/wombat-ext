@@ -1,3 +1,10 @@
+
+ifeq ($(OS),Windows_NT)
+	COMPILEREXT := .exe
+else
+	COMPILEREXT := 
+endif
+
 .PHONY: all compiler extension package clean
 
 # Build everything: C compiler first, then the VS Code extension
@@ -6,7 +13,8 @@ all: compiler extension
 # Build the wombat-compiler C binary and copy it to bin/
 compiler:
 	$(MAKE) -C compiler
-	cp compiler/wombat-compiler bin/wombat-compiler
+	mkdir -p bin
+	cp compiler/wombat-compiler$(COMPILEREXT) bin/
 
 # Compile TypeScript (client + LSP server). server/npm install is handled by the compile script.
 extension:
