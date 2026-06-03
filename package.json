@@ -1,0 +1,114 @@
+{
+  "name": "wombat-ext",
+  "displayName": "Wombat Script",
+  "description": "Language support and compiler integration for the Ultima Online (June 1998) Wombat scripting language",
+  "version": "0.1.0",
+  "publisher": "uo-june98",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uo-june98/wombat-ext"
+  },
+  "keywords": [
+    "wombat",
+    "ultima online",
+    "uo",
+    "language server",
+    "syntax highlighting",
+    "compiler"
+  ],
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/*.m"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "languages": [
+      {
+        "id": "wombat",
+        "aliases": [
+          "Wombat Script",
+          "wombat"
+        ],
+        "extensions": [
+          ".m"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "wombat",
+        "scopeName": "source.wombat",
+        "path": "./syntaxes/wombat.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "wombat.compile",
+        "title": "Wombat: Compile Changed Scripts"
+      },
+      {
+        "command": "wombat.compileAll",
+        "title": "Wombat: Compile All Scripts"
+      },
+      {
+        "command": "wombat.compileFile",
+        "title": "Wombat: Compile Current File"
+      },
+      {
+        "command": "wombat.configure",
+        "title": "Wombat: Set Destination Directory"
+      }
+    ],
+    "configuration": {
+      "title": "Wombat Script",
+      "properties": {
+        "wombat.scriptsDirectory": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the Wombat scripts directory (for cross-file go-to-definition). Leave blank to use the directory of the current file."
+        },
+        "wombat.compilerPath": {
+          "type": "string",
+          "default": "wombat-compiler",
+          "description": "Path to the wombat-compiler executable."
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        { "command": "wombat.compile" },
+        { "command": "wombat.compileAll" },
+        { "command": "wombat.compileFile" },
+        { "command": "wombat.configure" }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./tsconfig.json && cd server && npm install && npm run compile",
+    "watch": "tsc -p ./tsconfig.json -w",
+    "bundle": "esbuild src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify && esbuild server/src/server.ts --bundle --outfile=server/out/server.js --external:vscode --format=cjs --platform=node --minify",
+    "gen-enums": "node server/gen-enums.mjs",
+    "build-catalog": "cd server && node build-catalog.js",
+    "package": "vsce package",
+    "vscode:prepublish": "npm run bundle",
+    "compiler:build": "make -C compiler && cp compiler/wombat-compiler bin/wombat-compiler",
+    "compiler:clean": "make -C compiler clean && rm -f bin/wombat-compiler"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.75.0",
+    "@vscode/vsce": "^3.9.1",
+    "esbuild": "^0.28.0",
+    "typescript": "^5.0.0"
+  }
+}

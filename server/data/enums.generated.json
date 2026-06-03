@@ -1,0 +1,1205 @@
+{
+  "EventType": [
+    {
+      "name": "Speech",
+      "value": 0,
+      "hex": "0"
+    },
+    {
+      "name": "GotAttacked",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "KilledTarget",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "Death",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "SawDeath",
+      "value": 5,
+      "hex": "5"
+    },
+    {
+      "name": "FightPulse",
+      "value": 6,
+      "hex": "6"
+    },
+    {
+      "name": "WasHit",
+      "value": 7,
+      "hex": "7"
+    },
+    {
+      "name": "Creation",
+      "value": 15,
+      "hex": "0xF"
+    },
+    {
+      "name": "EnterRange",
+      "value": 16,
+      "hex": "0x10"
+    },
+    {
+      "name": "LeaveRange",
+      "value": 17,
+      "hex": "0x11"
+    },
+    {
+      "name": "Message",
+      "value": 22,
+      "hex": "0x16"
+    },
+    {
+      "name": "UseItem",
+      "value": 23,
+      "hex": "0x17"
+    },
+    {
+      "name": "TargetObject",
+      "value": 24,
+      "hex": "0x18"
+    },
+    {
+      "name": "TargetLocation",
+      "value": 25,
+      "hex": "0x19"
+    },
+    {
+      "name": "WasDropped",
+      "value": 27,
+      "hex": "0x1B"
+    },
+    {
+      "name": "LookedAt",
+      "value": 28,
+      "hex": "0x1C"
+    },
+    {
+      "name": "Give",
+      "value": 29,
+      "hex": "0x1D"
+    },
+    {
+      "name": "WasGotten",
+      "value": 30,
+      "hex": "0x1E"
+    },
+    {
+      "name": "Callback",
+      "value": 33,
+      "hex": "0x21"
+    },
+    {
+      "name": "IsHitting",
+      "value": 34,
+      "hex": "0x22"
+    },
+    {
+      "name": "PickedObj",
+      "value": 36,
+      "hex": "0x24"
+    },
+    {
+      "name": "HueSelected",
+      "value": 37,
+      "hex": "0x25"
+    },
+    {
+      "name": "DeleteEntity",
+      "value": 43,
+      "hex": "0x2B"
+    },
+    {
+      "name": "Equip",
+      "value": 44,
+      "hex": "0x2C"
+    },
+    {
+      "name": "Unequip",
+      "value": 45,
+      "hex": "0x2D"
+    },
+    {
+      "name": "IsStackableOn",
+      "value": 46,
+      "hex": "0x2E"
+    },
+    {
+      "name": "StackOnto",
+      "value": 47,
+      "hex": "0x2F"
+    },
+    {
+      "name": "UseObject",
+      "value": 51,
+      "hex": "0x33"
+    },
+    {
+      "name": "ObjectLoaded",
+      "value": 54,
+      "hex": "0x36"
+    },
+    {
+      "name": "GumpResponse",
+      "value": 55,
+      "hex": "0x37"
+    },
+    {
+      "name": "TargetObjectPre",
+      "value": 56,
+      "hex": "0x38"
+    },
+    {
+      "name": "StringResponse",
+      "value": 58,
+      "hex": "0x3A"
+    },
+    {
+      "name": "Shop",
+      "value": 59,
+      "hex": "0x3B"
+    },
+    {
+      "name": "StolenFrom",
+      "value": 60,
+      "hex": "0x3C"
+    },
+    {
+      "name": "ObjAccess",
+      "value": 61,
+      "hex": "0x3D"
+    },
+    {
+      "name": "LoginAppearance",
+      "value": 63,
+      "hex": "0x3F"
+    },
+    {
+      "name": "CheckTransfer",
+      "value": 64,
+      "hex": "0x40"
+    },
+    {
+      "name": "Transfer",
+      "value": 65,
+      "hex": "0x41"
+    },
+    {
+      "name": "CanBuy",
+      "value": 66,
+      "hex": "0x42"
+    },
+    {
+      "name": "MobIsHitting",
+      "value": 67,
+      "hex": "0x43"
+    },
+    {
+      "name": "FameChanged",
+      "value": 68,
+      "hex": "0x44"
+    },
+    {
+      "name": "KarmaChanged",
+      "value": 69,
+      "hex": "0x45"
+    },
+    {
+      "name": "MurderCountChanged",
+      "value": 70,
+      "hex": "0x46"
+    }
+  ],
+  "EntityTypeTag": [
+    {
+      "name": "ETYPE_ITEM",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "ETYPE_CONTAINER",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "ETYPE_WEAPON",
+      "value": 3,
+      "hex": "3"
+    },
+    {
+      "name": "ETYPE_MOBILE",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "ETYPE_NPC",
+      "value": 5,
+      "hex": "5"
+    },
+    {
+      "name": "ETYPE_PLAYER",
+      "value": 6,
+      "hex": "6"
+    },
+    {
+      "name": "ETYPE_SHOPKEEPER",
+      "value": 7,
+      "hex": "7"
+    },
+    {
+      "name": "ETYPE_MULTI",
+      "value": 8,
+      "hex": "8"
+    },
+    {
+      "name": "ETYPE_EGG",
+      "value": 9,
+      "hex": "9"
+    },
+    {
+      "name": "ETYPE_SIGNPOST",
+      "value": 10,
+      "hex": "0xA"
+    },
+    {
+      "name": "ETYPE_BOAT",
+      "value": 11,
+      "hex": "0xB"
+    },
+    {
+      "name": "ETYPE_GUARD",
+      "value": 12,
+      "hex": "0xC"
+    }
+  ],
+  "ItemFlag": [
+    {
+      "name": "ItemFlag_Invisible",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "ItemFlag_Stackable",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "ItemFlag_Open",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "ItemFlag_Poisoned",
+      "value": 8,
+      "hex": "8"
+    },
+    {
+      "name": "ItemFlag_ServerOnly",
+      "value": 16,
+      "hex": "0x10"
+    },
+    {
+      "name": "ItemFlag_DeletePending",
+      "value": 32,
+      "hex": "0x20"
+    },
+    {
+      "name": "ItemFlag_Deleted",
+      "value": 64,
+      "hex": "0x40"
+    }
+  ],
+  "MobileFlag": [
+    {
+      "name": "MobileFlag_WarMode",
+      "value": 64,
+      "hex": "0x40"
+    }
+  ],
+  "PlayerFlag": [
+    {
+      "name": "PlayerIsMovePrevented",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "PlayerIsEditing",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "PlayerIsOnline",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "PlayerIsLoaded",
+      "value": 8,
+      "hex": "8"
+    },
+    {
+      "name": "PlayerIsManifesting",
+      "value": 32,
+      "hex": "0x20"
+    },
+    {
+      "name": "PlayerSpiritSpeak",
+      "value": 1024,
+      "hex": "0x400"
+    },
+    {
+      "name": "PlayerIsGameMaster",
+      "value": 4096,
+      "hex": "0x1000"
+    },
+    {
+      "name": "PlayerFlag_0x2000",
+      "value": 8192,
+      "hex": "0x2000"
+    },
+    {
+      "name": "PlayerIsDead",
+      "value": 16384,
+      "hex": "0x4000"
+    },
+    {
+      "name": "PlayerIsCounselor",
+      "value": 32768,
+      "hex": "0x8000"
+    },
+    {
+      "name": "PlayerIsGold",
+      "value": 131072,
+      "hex": "0x20000"
+    }
+  ],
+  "WeaponType_*": [
+    {
+      "name": "WeaponType_Slashing",
+      "value": 1,
+      "hex": "0x1"
+    },
+    {
+      "name": "WeaponType_Piercing",
+      "value": 2,
+      "hex": "0x2"
+    },
+    {
+      "name": "WeaponType_Bashing",
+      "value": 4,
+      "hex": "0x4"
+    },
+    {
+      "name": "WeaponType_Ranged",
+      "value": 8,
+      "hex": "0x8"
+    },
+    {
+      "name": "WeaponType_Shield",
+      "value": 16,
+      "hex": "0x10"
+    }
+  ],
+  "TIMER_EVENT_*": [
+    {
+      "name": "TIMER_EVENT_DELETE",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "TIMER_EVENT_DECAY_CONTAINER",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "TIMER_EVENT_IDLE_DISCONNECT",
+      "value": 3,
+      "hex": "3"
+    },
+    {
+      "name": "TIMER_EVENT_DOOR_CLOSE",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "TIMER_EVENT_CALLBACK",
+      "value": 5,
+      "hex": "5"
+    },
+    {
+      "name": "TIMER_EVENT_AI_SCHED_DELETE",
+      "value": 6,
+      "hex": "6"
+    },
+    {
+      "name": "TIMER_EVENT_SPEECH",
+      "value": 7,
+      "hex": "7"
+    },
+    {
+      "name": "TIMER_EVENT_VALUELESS_DECAY",
+      "value": 8,
+      "hex": "8"
+    },
+    {
+      "name": "TIMER_EVENT_ONLINE_CHECK",
+      "value": 9,
+      "hex": "9"
+    },
+    {
+      "name": "TIMER_EVENT_NPC_TICK",
+      "value": 10,
+      "hex": "0xA"
+    },
+    {
+      "name": "TIMER_EVENT_SET_STRING_PROP",
+      "value": 11,
+      "hex": "0xB"
+    },
+    {
+      "name": "TIMER_EVENT_WAR_MODE_CLEAR",
+      "value": 12,
+      "hex": "0xC"
+    },
+    {
+      "name": "TIMER_EVENT_SET_STRING_DETACH",
+      "value": 13,
+      "hex": "0xD"
+    },
+    {
+      "name": "TIMER_EVENT_UNFREEZE",
+      "value": 14,
+      "hex": "0xE"
+    },
+    {
+      "name": "TIMER_EVENT_UNSQUELCH",
+      "value": 15,
+      "hex": "0xF"
+    },
+    {
+      "name": "TIMER_EVENT_CLR_INVULN",
+      "value": 16,
+      "hex": "0x10"
+    },
+    {
+      "name": "TIMER_EVENT_CRIMINAL",
+      "value": 17,
+      "hex": "0x11"
+    },
+    {
+      "name": "TIMER_EVENT_SET_CHAOS",
+      "value": 18,
+      "hex": "0x12"
+    },
+    {
+      "name": "TIMER_EVENT_SET_ORDER",
+      "value": 19,
+      "hex": "0x13"
+    },
+    {
+      "name": "TIMER_EVENT_CTRL_TIMEOUT",
+      "value": 20,
+      "hex": "0x14"
+    }
+  ],
+  "WTYPE_*": [
+    {
+      "name": "WTYPE_INT",
+      "value": 0,
+      "hex": "0"
+    },
+    {
+      "name": "WTYPE_STRING",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "WTYPE_USTRING",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "WTYPE_LOC",
+      "value": 3,
+      "hex": "3"
+    },
+    {
+      "name": "WTYPE_OBJ",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "WTYPE_LIST",
+      "value": 5,
+      "hex": "5"
+    },
+    {
+      "name": "WTYPE_VOID",
+      "value": 6,
+      "hex": "6"
+    },
+    {
+      "name": "WTYPE_UNKNOWN",
+      "value": 7,
+      "hex": "7"
+    },
+    {
+      "name": "WTYPE_COUNT",
+      "value": 8,
+      "hex": "8"
+    }
+  ],
+  "FeatureFlag": [
+    {
+      "name": "FEAT_SKILL_LOCK",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "FEAT_SKILL_MEDITATION",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "FEAT_SKILL_STEALTH",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "FEAT_SKILL_REMOVE_TRAP",
+      "value": 8,
+      "hex": "8"
+    },
+    {
+      "name": "FEAT_ECOLOGY",
+      "value": 16,
+      "hex": "0x10"
+    },
+    {
+      "name": "FEAT_LIGHTS",
+      "value": 32,
+      "hex": "0x20"
+    },
+    {
+      "name": "FEAT_CREATION_COLORS",
+      "value": 64,
+      "hex": "0x40"
+    },
+    {
+      "name": "FEAT_SPAWN_BUDGET",
+      "value": 128,
+      "hex": "0x80"
+    },
+    {
+      "name": "FEAT_SPAWN_STRICT_TAGS",
+      "value": 256,
+      "hex": "0x100"
+    },
+    {
+      "name": "FEAT_SKILL_TRACKING",
+      "value": 2048,
+      "hex": "0x800"
+    }
+  ],
+  "AccountFlag": [
+    {
+      "name": "ACCT_BANNED",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "ACCT_GODMODE",
+      "value": 2,
+      "hex": "2"
+    }
+  ],
+  "TileFlag": [
+    {
+      "name": "TF_WEAPON",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "TF_STACKABLE",
+      "value": 2048,
+      "hex": "0x800"
+    },
+    {
+      "name": "TF_ARTICLE_A",
+      "value": 16384,
+      "hex": "0x4000"
+    },
+    {
+      "name": "TF_ARTICLE_AN",
+      "value": 32768,
+      "hex": "0x8000"
+    },
+    {
+      "name": "TF_ARTICLE_MASK",
+      "value": 49152,
+      "hex": "0xC000"
+    },
+    {
+      "name": "TF_MAP",
+      "value": 1048576,
+      "hex": "0x100000"
+    },
+    {
+      "name": "TF_CONTAINER",
+      "value": 2097152,
+      "hex": "0x200000"
+    },
+    {
+      "name": "TF_EQUIPPABLE",
+      "value": 4194304,
+      "hex": "0x400000"
+    },
+    {
+      "name": "TF_LIGHT",
+      "value": 8388608,
+      "hex": "0x800000"
+    },
+    {
+      "name": "TF_ARMOR",
+      "value": 134217728,
+      "hex": "0x8000000"
+    },
+    {
+      "name": "TF_DOOR",
+      "value": 536870912,
+      "hex": "0x20000000"
+    }
+  ],
+  "LandTileFlag": [
+    {
+      "name": "LTF_IMPASSABLE",
+      "value": 64,
+      "hex": "0x40"
+    },
+    {
+      "name": "LTF_WET",
+      "value": 128,
+      "hex": "0x80"
+    }
+  ],
+  "TerrainTileFlag": [
+    {
+      "name": "TF_IMPASSABLE",
+      "value": 64,
+      "hex": "0x40"
+    },
+    {
+      "name": "TF_WET",
+      "value": 128,
+      "hex": "0x80"
+    },
+    {
+      "name": "TF_SURFACE",
+      "value": 512,
+      "hex": "0x200"
+    },
+    {
+      "name": "TF_BRIDGE",
+      "value": 1024,
+      "hex": "0x400"
+    }
+  ],
+  "Skill": [
+    {
+      "name": "SKILL_ALCHEMY",
+      "value": 0,
+      "hex": "0"
+    },
+    {
+      "name": "SKILL_ANATOMY",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "SKILL_ANIMAL_LORE",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "SKILL_ITEM_ID",
+      "value": 3,
+      "hex": "3"
+    },
+    {
+      "name": "SKILL_ARMS_LORE",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "SKILL_PARRYING",
+      "value": 5,
+      "hex": "5"
+    },
+    {
+      "name": "SKILL_BEGGING",
+      "value": 6,
+      "hex": "6"
+    },
+    {
+      "name": "SKILL_BLACKSMITHY",
+      "value": 7,
+      "hex": "7"
+    },
+    {
+      "name": "SKILL_BOWCRAFT",
+      "value": 8,
+      "hex": "8"
+    },
+    {
+      "name": "SKILL_PEACEMAKING",
+      "value": 9,
+      "hex": "9"
+    },
+    {
+      "name": "SKILL_CAMPING",
+      "value": 10,
+      "hex": "0xA"
+    },
+    {
+      "name": "SKILL_CARPENTRY",
+      "value": 11,
+      "hex": "0xB"
+    },
+    {
+      "name": "SKILL_CARTOGRAPHY",
+      "value": 12,
+      "hex": "0xC"
+    },
+    {
+      "name": "SKILL_COOKING",
+      "value": 13,
+      "hex": "0xD"
+    },
+    {
+      "name": "SKILL_DETECT_HIDDEN",
+      "value": 14,
+      "hex": "0xE"
+    },
+    {
+      "name": "SKILL_ENTICEMENT",
+      "value": 15,
+      "hex": "0xF"
+    },
+    {
+      "name": "SKILL_EVAL_INT",
+      "value": 16,
+      "hex": "0x10"
+    },
+    {
+      "name": "SKILL_HEALING",
+      "value": 17,
+      "hex": "0x11"
+    },
+    {
+      "name": "SKILL_FISHING",
+      "value": 18,
+      "hex": "0x12"
+    },
+    {
+      "name": "SKILL_FORENSIC",
+      "value": 19,
+      "hex": "0x13"
+    },
+    {
+      "name": "SKILL_HERDING",
+      "value": 20,
+      "hex": "0x14"
+    },
+    {
+      "name": "SKILL_HIDING",
+      "value": 21,
+      "hex": "0x15"
+    },
+    {
+      "name": "SKILL_PROVOCATION",
+      "value": 22,
+      "hex": "0x16"
+    },
+    {
+      "name": "SKILL_INSCRIPTION",
+      "value": 23,
+      "hex": "0x17"
+    },
+    {
+      "name": "SKILL_LOCKPICKING",
+      "value": 24,
+      "hex": "0x18"
+    },
+    {
+      "name": "SKILL_MAGERY",
+      "value": 25,
+      "hex": "0x19"
+    },
+    {
+      "name": "SKILL_MAGIC_RESIST",
+      "value": 26,
+      "hex": "0x1A"
+    },
+    {
+      "name": "SKILL_TACTICS",
+      "value": 27,
+      "hex": "0x1B"
+    },
+    {
+      "name": "SKILL_SNOOPING",
+      "value": 28,
+      "hex": "0x1C"
+    },
+    {
+      "name": "SKILL_MUSICIANSHIP",
+      "value": 29,
+      "hex": "0x1D"
+    },
+    {
+      "name": "SKILL_POISONING",
+      "value": 30,
+      "hex": "0x1E"
+    },
+    {
+      "name": "SKILL_ARCHERY",
+      "value": 31,
+      "hex": "0x1F"
+    },
+    {
+      "name": "SKILL_SPIRIT_SPEAK",
+      "value": 32,
+      "hex": "0x20"
+    },
+    {
+      "name": "SKILL_STEALING",
+      "value": 33,
+      "hex": "0x21"
+    },
+    {
+      "name": "SKILL_TAILORING",
+      "value": 34,
+      "hex": "0x22"
+    },
+    {
+      "name": "SKILL_ANIMAL_TAMING",
+      "value": 35,
+      "hex": "0x23"
+    },
+    {
+      "name": "SKILL_TASTE_ID",
+      "value": 36,
+      "hex": "0x24"
+    },
+    {
+      "name": "SKILL_TINKERING",
+      "value": 37,
+      "hex": "0x25"
+    },
+    {
+      "name": "SKILL_TRACKING",
+      "value": 38,
+      "hex": "0x26"
+    },
+    {
+      "name": "SKILL_VETERINARY",
+      "value": 39,
+      "hex": "0x27"
+    },
+    {
+      "name": "SKILL_SWORDSMANSHIP",
+      "value": 40,
+      "hex": "0x28"
+    },
+    {
+      "name": "SKILL_MACE_FIGHTING",
+      "value": 41,
+      "hex": "0x29"
+    },
+    {
+      "name": "SKILL_FENCING",
+      "value": 42,
+      "hex": "0x2A"
+    },
+    {
+      "name": "SKILL_WRESTLING",
+      "value": 43,
+      "hex": "0x2B"
+    },
+    {
+      "name": "SKILL_LUMBERJACKING",
+      "value": 44,
+      "hex": "0x2C"
+    },
+    {
+      "name": "SKILL_MINING",
+      "value": 45,
+      "hex": "0x2D"
+    },
+    {
+      "name": "SKILL_MEDITATION",
+      "value": 46,
+      "hex": "0x2E"
+    },
+    {
+      "name": "SKILL_STEALTH",
+      "value": 47,
+      "hex": "0x2F"
+    },
+    {
+      "name": "SKILL_REMOVE_TRAP",
+      "value": 48,
+      "hex": "0x30"
+    },
+    {
+      "name": "SKILL_COUNT",
+      "value": 49,
+      "hex": "0x31"
+    }
+  ],
+  "Direction": [
+    {
+      "name": "DIR_NORTH",
+      "value": 0,
+      "hex": "0"
+    },
+    {
+      "name": "DIR_NORTHEAST",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "DIR_EAST",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "DIR_SOUTHEAST",
+      "value": 3,
+      "hex": "3"
+    },
+    {
+      "name": "DIR_SOUTH",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "DIR_SOUTHWEST",
+      "value": 5,
+      "hex": "5"
+    },
+    {
+      "name": "DIR_WEST",
+      "value": 6,
+      "hex": "6"
+    },
+    {
+      "name": "DIR_NORTHWEST",
+      "value": 7,
+      "hex": "7"
+    }
+  ],
+  "StatId": [
+    {
+      "name": "STAT_STR",
+      "value": 0,
+      "hex": "0"
+    },
+    {
+      "name": "STAT_DEX",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "STAT_INT",
+      "value": 2,
+      "hex": "2"
+    }
+  ],
+  "Alignment": [
+    {
+      "name": "ALIGNMENT_NEUTRAL",
+      "value": 0,
+      "hex": "0"
+    },
+    {
+      "name": "ALIGNMENT_GOOD",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "ALIGNMENT_EVIL",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "ALIGNMENT_CHAOTIC",
+      "value": 3,
+      "hex": "3"
+    }
+  ],
+  "Layer": [
+    {
+      "name": "EQUIP_RIGHT_HAND",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "EQUIP_LEFT_HAND",
+      "value": 2,
+      "hex": "2"
+    },
+    {
+      "name": "EQUIP_SHOES",
+      "value": 3,
+      "hex": "3"
+    },
+    {
+      "name": "EQUIP_PANTS",
+      "value": 4,
+      "hex": "4"
+    },
+    {
+      "name": "EQUIP_SHIRT",
+      "value": 5,
+      "hex": "5"
+    },
+    {
+      "name": "EQUIP_HELMET",
+      "value": 6,
+      "hex": "6"
+    },
+    {
+      "name": "EQUIP_GLOVES",
+      "value": 7,
+      "hex": "7"
+    },
+    {
+      "name": "EQUIP_RING",
+      "value": 8,
+      "hex": "8"
+    },
+    {
+      "name": "EQUIP_NECK",
+      "value": 10,
+      "hex": "0xA"
+    },
+    {
+      "name": "EQUIP_HAIR",
+      "value": 11,
+      "hex": "0xB"
+    },
+    {
+      "name": "EQUIP_WAIST",
+      "value": 12,
+      "hex": "0xC"
+    },
+    {
+      "name": "EQUIP_INNER_TORSO",
+      "value": 13,
+      "hex": "0xD"
+    },
+    {
+      "name": "EQUIP_OUTER_TORSO",
+      "value": 14,
+      "hex": "0xE"
+    },
+    {
+      "name": "EQUIP_BRACELET",
+      "value": 15,
+      "hex": "0xF"
+    },
+    {
+      "name": "EQUIP_FACIAL_HAIR",
+      "value": 16,
+      "hex": "0x10"
+    },
+    {
+      "name": "EQUIP_MIDDLE_TORSO",
+      "value": 17,
+      "hex": "0x11"
+    },
+    {
+      "name": "EQUIP_EARRINGS",
+      "value": 18,
+      "hex": "0x12"
+    },
+    {
+      "name": "EQUIP_ARMS",
+      "value": 19,
+      "hex": "0x13"
+    },
+    {
+      "name": "EQUIP_CLOAK",
+      "value": 20,
+      "hex": "0x14"
+    },
+    {
+      "name": "EQUIP_BACKPACK",
+      "value": 21,
+      "hex": "0x15"
+    },
+    {
+      "name": "EQUIP_OUTER_LEGS",
+      "value": 22,
+      "hex": "0x16"
+    },
+    {
+      "name": "EQUIP_INNER_LEGS",
+      "value": 23,
+      "hex": "0x17"
+    },
+    {
+      "name": "EQUIP_BEARD",
+      "value": 24,
+      "hex": "0x18"
+    },
+    {
+      "name": "EQUIP_MOUNT",
+      "value": 25,
+      "hex": "0x19"
+    },
+    {
+      "name": "EQUIP_NPC_SELL",
+      "value": 26,
+      "hex": "0x1A"
+    },
+    {
+      "name": "EQUIP_NPC_BUY",
+      "value": 27,
+      "hex": "0x1B"
+    },
+    {
+      "name": "EQUIP_NPC_OFFERED",
+      "value": 28,
+      "hex": "0x1C"
+    },
+    {
+      "name": "EQUIP_BANK",
+      "value": 29,
+      "hex": "0x1D"
+    }
+  ],
+  "MaxStatId": [
+    {
+      "name": "STAT_MAX_HP",
+      "value": 0,
+      "hex": "0"
+    },
+    {
+      "name": "STAT_MAX_STAMINA",
+      "value": 1,
+      "hex": "1"
+    },
+    {
+      "name": "STAT_MAX_MANA",
+      "value": 2,
+      "hex": "2"
+    }
+  ]
+}

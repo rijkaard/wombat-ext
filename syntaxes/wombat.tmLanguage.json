@@ -1,0 +1,83 @@
+{
+  "name": "Wombat Script",
+  "scopeName": "source.wombat",
+  "fileTypes": ["m"],
+  "patterns": [
+    { "include": "#block-comment" },
+    { "include": "#line-comment" },
+    { "include": "#string" },
+    { "include": "#null-literal" },
+    { "include": "#number" },
+    { "include": "#control-keywords" },
+    { "include": "#declaration-keywords" },
+    { "include": "#type-keywords" },
+    { "include": "#engine-call" },
+    { "include": "#user-call" },
+    { "include": "#identifier" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "block-comment": {
+      "name": "comment.block.wombat",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "beginCaptures": { "0": { "name": "punctuation.definition.comment.begin.wombat" } },
+      "endCaptures":   { "0": { "name": "punctuation.definition.comment.end.wombat"   } }
+    },
+    "line-comment": {
+      "name": "comment.line.double-slash.wombat",
+      "match": "//.*$",
+      "captures": { "0": { "name": "comment.line.double-slash.wombat" } }
+    },
+    "string": {
+      "name": "string.quoted.double.wombat",
+      "begin": "\"",
+      "end": "\"",
+      "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.wombat" } },
+      "endCaptures":   { "0": { "name": "punctuation.definition.string.end.wombat"   } },
+      "patterns": [
+        { "name": "constant.character.escape.wombat", "match": "\\\\." }
+      ]
+    },
+    "null-literal": {
+      "name": "constant.language.null.wombat",
+      "match": "\\bNULL\\(\\)"
+    },
+    "number": {
+      "patterns": [
+        { "name": "constant.numeric.hex.wombat",     "match": "\\b0[xX][0-9A-Fa-f]+" },
+        { "name": "constant.numeric.float.wombat",   "match": "\\b[0-9]+\\.[0-9]*|(?<![\\w.])\\.[0-9]+" },
+        { "name": "constant.numeric.integer.wombat", "match": "\\b[0-9]+" }
+      ]
+    },
+    "control-keywords": {
+      "name": "keyword.control.wombat",
+      "match": "\\b(if|else|switch|case|default|break|for|while|return)\\b"
+    },
+    "declaration-keywords": {
+      "name": "keyword.other.wombat",
+      "match": "\\b(inherits|forward|member|function|trigger)\\b"
+    },
+    "type-keywords": {
+      "name": "storage.type.wombat",
+      "match": "\\b(int|obj|void|string|float|list|loc|str)\\b"
+    },
+    "engine-call": {
+      "comment": "camelCase built-in: starts lowercase, contains at least one uppercase",
+      "name": "support.function.builtin.wombat",
+      "match": "\\b([a-z][a-zA-Z0-9]*[A-Z][a-zA-Z0-9]*)(?=\\s*\\()"
+    },
+    "user-call": {
+      "name": "entity.name.function.wombat",
+      "match": "\\b([A-Za-z_][A-Za-z0-9_]*)(?=\\s*\\()"
+    },
+    "identifier": {
+      "name": "variable.other.wombat",
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+    },
+    "operators": {
+      "name": "keyword.operator.wombat",
+      "match": "\\+\\+|--|\\+=|-=|\\*=|/=|%=|==|!=|<=|>=|<<|>>|&&|\\|\\||[+\\-*/%&|^~!<>=]"
+    }
+  }
+}

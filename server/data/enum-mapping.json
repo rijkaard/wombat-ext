@@ -1,0 +1,32 @@
+{
+  "headers": [
+    "../../../ouo/enumerations.h",
+    "../../../ouo/entity.h",
+    "../../../ouo/mobile.h",
+    "../../../ouo/item.h",
+    "../../../ouo/account.h",
+    "../../../ouo/feature.h",
+    "../../../ouo/terrain.h",
+    "../../../ouo/player.h"
+  ],
+  "typeMap": {
+    "SkillId":        "Skill",
+    "StatIndex":      "StatId",
+    "MaxStatId":      "MaxStatId",
+    "EquipLayer":     "Layer",
+    "Direction":      "Direction",
+    "TimerEventType": "TIMER_EVENT_*",
+    "WombatType":     "WTYPE_*",
+    "NPCAlignment":   "Alignment",
+    "EntityTypeTag":  "EntityTypeTag",
+    "EventType":      "EventType",
+    "ItemFlag":       "ItemFlag",
+    "MobileFlag":     "MobileFlag",
+    "PlayerFlag":     "PlayerFlag",
+    "AccountFlag":    "AccountFlag",
+    "FeatureFlag":    "FeatureFlag",
+    "TileFlag":       "TileFlag",
+    "LandTileFlag":   "LandTileFlag",
+    "TerrainTileFlag":"TerrainTileFlag"
+  }
+}

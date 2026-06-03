@@ -1,0 +1,586 @@
+{
+  "isinlist": {
+    "params": [
+      {
+        "name": "type",
+        "pos": 1,
+        "enum": "WTYPE_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "callbackadvanced": {
+    "params": [
+      {
+        "name": "eventType",
+        "pos": 2,
+        "enum": "TIMER_EVENT_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "removecallbackadvanced": {
+    "params": [
+      {
+        "name": "eventType",
+        "pos": 1,
+        "enum": "TIMER_EVENT_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "hascallbackadvanced": {
+    "params": [
+      {
+        "name": "eventType",
+        "pos": 1,
+        "enum": "TIMER_EVENT_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "scripttrig": {
+    "params": [
+      {
+        "name": "trigType",
+        "pos": 1,
+        "enum": "EventType",
+        "bitmask": false
+      }
+    ]
+  },
+  "dodamagetype": {
+    "params": [
+      {
+        "name": "type",
+        "pos": 3,
+        "enum": "WeaponType_*",
+        "bitmask": true
+      }
+    ]
+  },
+  "setmobflag": {
+    "params": [
+      {
+        "name": "flagId",
+        "pos": 1,
+        "enum": "MobileFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "getmobflag": {
+    "params": [
+      {
+        "name": "flagId",
+        "pos": 1,
+        "enum": "MobileFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "getobjectsinrangewithflags": {
+    "params": [
+      {
+        "name": "flags",
+        "pos": 3,
+        "enum": "ItemFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "getnumallobjectsinrangewithflags": {
+    "params": [
+      {
+        "name": "flags",
+        "pos": 2,
+        "enum": "ItemFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "isInList": {
+    "params": [
+      {
+        "name": "type",
+        "pos": 1,
+        "enum": "WTYPE_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "callbackAdvanced": {
+    "params": [
+      {
+        "name": "eventType",
+        "pos": 2,
+        "enum": "TIMER_EVENT_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "removeCallbackAdvanced": {
+    "params": [
+      {
+        "name": "eventType",
+        "pos": 1,
+        "enum": "TIMER_EVENT_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "hasCallbackAdvanced": {
+    "params": [
+      {
+        "name": "eventType",
+        "pos": 1,
+        "enum": "TIMER_EVENT_*",
+        "bitmask": false
+      }
+    ]
+  },
+  "scriptTrig": {
+    "params": [
+      {
+        "name": "trigType",
+        "pos": 1,
+        "enum": "EventType",
+        "bitmask": false
+      }
+    ]
+  },
+  "doDamageType": {
+    "params": [
+      {
+        "name": "type",
+        "pos": 3,
+        "enum": "WeaponType_*",
+        "bitmask": true
+      }
+    ]
+  },
+  "setMobFlag": {
+    "params": [
+      {
+        "name": "flagId",
+        "pos": 1,
+        "enum": "MobileFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "getMobFlag": {
+    "params": [
+      {
+        "name": "flagId",
+        "pos": 1,
+        "enum": "MobileFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "getObjectsInRangeWithFlags": {
+    "params": [
+      {
+        "name": "flags",
+        "pos": 3,
+        "enum": "ItemFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "getNumAllObjectsInRangeWithFlags": {
+    "params": [
+      {
+        "name": "flags",
+        "pos": 2,
+        "enum": "ItemFlag",
+        "bitmask": true
+      }
+    ]
+  },
+  "handleWatchingSkill": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "testSkillReal": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "skillTestReal": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "testSkill": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "skillTest": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillSuccessChance": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "testAndLearnSkill": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillLevel": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillLevelReal": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillLevelRealStat": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillLevelNoStat": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillLevelNoStatNoMod": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "setSkillLevel": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "addSkillLevel": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "loseSkillLevel": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillMod": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "setSkillMod": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "modifySkillMod": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 1,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "getSkillName": {
+    "params": [
+      {
+        "name": "skillId",
+        "pos": 0,
+        "enum": "Skill",
+        "bitmask": false
+      }
+    ]
+  },
+  "walk": {
+    "params": [
+      {
+        "name": "dir",
+        "pos": 1,
+        "enum": "Direction",
+        "bitmask": false
+      }
+    ]
+  },
+  "run": {
+    "params": [
+      {
+        "name": "dir",
+        "pos": 1,
+        "enum": "Direction",
+        "bitmask": false
+      }
+    ]
+  },
+  "faceHere": {
+    "params": [
+      {
+        "name": "dir",
+        "pos": 1,
+        "enum": "Direction",
+        "bitmask": false
+      }
+    ]
+  },
+  "moveDir": {
+    "params": [
+      {
+        "name": "dir",
+        "pos": 1,
+        "enum": "Direction",
+        "bitmask": false
+      }
+    ]
+  },
+  "findGoodZ": {
+    "params": [
+      {
+        "name": "direction",
+        "pos": 2,
+        "enum": "Direction",
+        "bitmask": false
+      }
+    ]
+  },
+  "getStat": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "getRealStat": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "getStatMod": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "modifyStat": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "modifyRealStat": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "setStatMod": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "setRealStat": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "getStatAttributeMax": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "setStatAttributeMax": {
+    "params": [
+      {
+        "name": "statId",
+        "pos": 1,
+        "enum": "StatId",
+        "bitmask": false
+      }
+    ]
+  },
+  "setAlignment": {
+    "params": [
+      {
+        "name": "alignment",
+        "pos": 1,
+        "enum": "Alignment",
+        "bitmask": false
+      }
+    ]
+  },
+  "equipObj": {
+    "params": [
+      {
+        "name": "layer",
+        "pos": 2,
+        "enum": "Layer",
+        "bitmask": false
+      }
+    ]
+  },
+  "getItemAtSlot": {
+    "params": [
+      {
+        "name": "slot",
+        "pos": 1,
+        "enum": "Layer",
+        "bitmask": false
+      }
+    ]
+  },
+  "apply_stat_effect": {
+    "params": [{ "name": "statId", "pos": 1, "enum": "StatId", "bitmask": false }]
+  },
+  "apply_stat_effect_if_absent": {
+    "params": [{ "name": "statId", "pos": 1, "enum": "StatId", "bitmask": false }]
+  },
+  "apply_stat_mod": {
+    "params": [{ "name": "statId", "pos": 1, "enum": "StatId", "bitmask": false }]
+  },
+  "check_move_steps": {
+    "params": [{ "name": "dir", "pos": 1, "enum": "Direction", "bitmask": false }]
+  },
+  "remove_stat_effect": {
+    "params": [{ "name": "statId", "pos": 1, "enum": "StatId", "bitmask": false }]
+  },
+  "roll_skill_check": {
+    "params": [{ "name": "skillId", "pos": 1, "enum": "Skill", "bitmask": false }]
+  },
+  "teleport_off_plank": {
+    "params": [{ "name": "dir", "pos": 2, "enum": "Direction", "bitmask": false }]
+  },
+  "apply_stat_spell": {
+    "params": [{ "name": "statId", "pos": 2, "enum": "StatId", "bitmask": false }]
+  }
+}
