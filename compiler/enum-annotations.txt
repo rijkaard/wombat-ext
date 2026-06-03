@@ -1,0 +1,68 @@
+# Wombat engine-API enum argument annotations
+# Format: function_name arg_index(0-based) EnumTypeName
+#
+# These teach the compiler which argument positions expect which enum types.
+# An error is raised if an enum constant of the wrong type is used.
+
+# ── Skill functions (arg 1 = SkillId) ────────────────────────────────────
+getSkillLevel              1 SkillId
+getSkillLevelNoStat        1 SkillId
+getSkillLevelNoStatNoMod   1 SkillId
+getSkillLevelReal          1 SkillId
+getSkillLevelRealStat      1 SkillId
+setSkillLevel              1 SkillId
+addSkillLevel              1 SkillId
+loseSkillLevel             1 SkillId
+getSkillMod                1 SkillId
+setSkillMod                1 SkillId
+modifySkillMod             1 SkillId
+testAndLearnSkill          1 SkillId
+testSkill                  1 SkillId
+testSkillReal              1 SkillId
+skillTest                  1 SkillId
+skillTestReal              1 SkillId
+getSkillSuccessChance      1 SkillId
+handleWatchingSkill        1 SkillId
+
+# ── Skill functions (arg 0 = SkillId) ────────────────────────────────────
+getSkillName               0 SkillId
+
+# ── Stat functions (arg 1 = StatIndex) ───────────────────────────────────
+getRealStat                1 StatIndex
+modifyRealStat             1 StatIndex
+setRealStat                1 StatIndex
+modifyStat                 1 StatIndex
+getStatMod                 1 StatIndex
+setStatMod                 1 StatIndex
+
+# ── Max-stat cap functions (arg 1 = MaxStatId) ───────────────────────────
+getStatAttributeMax        1 MaxStatId
+setStatAttributeMax        1 MaxStatId
+
+# ── Movement (arg 1 = Direction) ─────────────────────────────────────────
+moveDir                    1 Direction
+
+# ── Equipment slot (arg 1 = EquipLayer) ──────────────────────────────────
+getItemAtSlot              1 EquipLayer
+
+# ── Timer event type (arg 2 = TimerEventType) ────────────────────────────
+callbackAdvanced           2 TimerEventType
+removeCallbackAdvanced     1 TimerEventType
+hasCallbackAdvanced        1 TimerEventType
+
+# ── Function return types (for switch/case substitution) ──────────────────
+# Format: function_name RETURNS EnumTypeName
+getDirectionInternal RETURNS Direction
+getFacing            RETURNS Direction
+
+# ── Inferred user-function annotations ────────────────────────────────────
+# Round 1: direct forwards to engine functions
+apply_stat_effect                   1 StatIndex
+apply_stat_effect_if_absent         1 StatIndex
+apply_stat_mod                      1 StatIndex
+check_move_steps                    1 Direction
+remove_stat_effect                  1 StatIndex
+roll_skill_check                    1 SkillId
+teleport_off_plank                  2 Direction
+# Round 2: transitively inferred
+apply_stat_spell                    2 StatIndex

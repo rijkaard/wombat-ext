@@ -1,0 +1,376 @@
+1781 Q4W1 Q4YE
+1782 Q4W1 Q4YE
+3519 Q686
+3520 Q686
+3613 Q66W
+3614 Q66W
+3615 Q66W
+3713 Q46A animal
+3714 Q46A animal
+3739 Q4FQ Q4R3 Q5JY Q5K3 Q5LP
+3846 Q463 Q4NC Q5VX
+3847 Q463 Q4NC Q5VX
+3848 Q463 Q4NC Q5VX
+3849 Q463 Q4NC Q5VX
+3850 Q463 Q4NC Q5VX
+3851 Q463 Q4NC Q5VX
+3852 Q463 Q4NC Q5VX
+3989 Q4H8
+3990 Q4H8
+3991 Q4H8
+3992 Q4H8
+3993 Q4H8
+3994 Q4H8
+3995 Q4H8
+3996 Q4H8
+3997 Q55M Q55N Q55S Q5C5 Q5UA Q5UC Q62D
+4000 Q66W
+4001 Q66W
+4009 Q66O
+4020 Q5NZ Q62D
+4021 Q5NZ Q62D
+4027 Q5NZ Q62D
+4028 Q5NZ Q62D
+4106 Q46T Q46U Q46V Q46W Q4FQ Q4WC Q57G Q5OJ Q5SV
+4107 Q46T Q46U Q46V Q46W Q4FQ Q4WC Q57G Q5OJ Q5SV
+4110 Q65M
+4111 Q65M
+4112 Q65M
+4113 lockLevel
+4114 Q65M
+4115 Q65M
+4136 Q512 Q5C5 Q62B Q62D Q694 Q697
+4137 Q512 Q5C5 Q62B Q62D Q694 Q697
+4138 Q512 Q5C5 Q62B Q62D Q694 Q697
+4139 Q512 Q5C5 Q62B Q62D Q694 Q697
+4140 Q512 Q5C5 Q62B Q62D Q694 Q697
+4141 Q512 Q5C5 Q62B Q62D Q694 Q697
+4142 Q512 Q5C5 Q62B Q62D Q694 Q697
+4143 Q512 Q5C5 Q62B Q62D Q694 Q697
+4144 Q512 Q5C5 Q62B Q62D Q694 Q697
+4145 Q512 Q5C5 Q62B Q62D Q694 Q697
+4146 Q512 Q5C5 Q62B Q62D Q694 Q697
+4147 Q512 Q5C5 Q62B Q62D Q694 Q697
+4148 Q512 Q5C5 Q62B Q62D Q694 Q697
+4149 Q512 Q5C5 Q62B Q62D Q694 Q697
+4173 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4174 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4175 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4176 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4177 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4178 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4179 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4180 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4181 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4182 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4185 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4186 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4187 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4188 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4189 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4190 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+4199 Q4H8
+4200 Q4H8
+4216 Q4H8
+4217 Q4H8
+4225 Q4H8
+4226 Q4H8
+4324 Q512 Q5C5 Q62B Q62D Q694 Q697
+4325 Q512 Q5C5 Q62B Q62D Q694 Q697
+4326 Q512 Q5C5 Q62B Q62D Q694 Q697
+4327 Q512 Q5C5 Q62B Q62D Q694 Q697
+4341 Q64Q
+4348 Q64Q
+4355 Q5DE Q5OF Q5XS Q68C
+4360 Q4VS Q5DE Q5V3 Q5XS Q68C
+4367 Q64Q
+4374 Q5DE Q5OF Q5XS Q68C
+4379 Q4VS Q5DE Q5V3 Q5XS Q68C
+4512 Q4VS Q5DE Q5V3 Q5XS Q68C
+4524 Q5DE Q5OF Q5XS Q68C
+4529 Q5DE Q5OF Q5XS Q68C
+5091 Q5NZ Q62D
+5092 Q5NZ Q62D
+5108 Q46A animal
+5109 Q46A animal
+5136 Q4HY
+5137 Q4HY
+5138 Q4HY
+5139 Q4HY
+5140 Q4HY
+5141 Q4HY
+5142 Q4HY
+5143 Q4HY
+5144 Q4HY
+5145 Q4HY
+5146 Q4HY
+5362 Q43W Q58A Q5NG Q65T lockLevel
+5981 Q4H8
+5982 Q4H8
+5983 Q4H8
+5984 Q4H8
+5985 Q4H8
+5986 Q4H8
+5987 Q4H8
+5988 Q4H8
+5989 Q4H8
+5990 Q4H8
+5991 Q4H8
+5992 Q4H8
+5993 lockLevel
+5994 lockLevel
+5995 lockLevel
+6432 Q66W
+6433 Q66W
+6434 Q66W
+6435 Q66W
+6436 Q66W
+6437 Q66W
+6438 Q66W
+6440 Q66W
+6444 Q66W
+6445 Q66W
+6446 Q66W
+6447 Q66W
+6448 Q66W
+6449 Q66W
+6450 Q66W
+6452 Q66W
+7172 Q4HY
+7173 Q4HY
+7868 Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+7869 Q66W
+7885 Q454 Q535 Q55T charges
+7888 Q454 Q535 Q55T charges
+add_door_to_key lockLevel
+addobjvarobj Q5F6
+alchemy Q4FQ Q4R3 Q5JY Q5K3 Q5LP
+amnesty4 Q4ID
+atkbonus Q471 Q688
+atkbonus1 Q471 Q688
+atkbonus2 Q471 Q688
+atkbonus3 Q471 Q688
+atkbonus4 Q471 Q688
+atkbonus5 Q471 Q688
+autokey lockLevel
+ballofyarn Q66W
+banker Q5M8 Q5OI
+beggingpathfind beggar victim
+blackgate Q533 Q5U4 Q63R Q66A
+blacksmith Q5NZ Q62D
+bldsprts Q4E1 Q57L
+bldsprtsbase Q4E1 Q57L
+bountyboard Q4GP
+bountyinfo Q454 Q5XH Q5XI bounty subject
+bountymasterboard Q48J Q490
+bspiritai Q4E1 Q4G9 Q57L Q5CC Q5CD Q67K Q67L trackee
+btguard Q4YU Q5YH
+btshrine Q5T1
+build Q45U Q4AS Q4IF Q4IG Q4IP Q4IQ Q4NK Q4NL Q4NM Q4NU Q4Q9 Q4QA Q4QB Q4QC Q4QD Q4QE Q4QF Q4U5 Q4U6 Q4U7 Q4U8 Q4U9 Q4UA Q4W0 Q51C Q51D Q51E Q51F Q51G Q51H Q51I Q52C Q542 Q54H Q583 Q584 Q585 Q586 Q587 Q588 Q589 Q5O8 Q5O9 Q5OA Q5OB Q5OC Q5RF Q5RJ Q5TX Q5TY Q5TZ Q5U0 Q5U1 Q5U2 Q5U3 Q5VG Q5VK Q5VR Q5W4 Q5XP Q5XQ Q5Y3 Q5ZF Q5ZG Q647 Q64K Q65Y Q686 gm
+butte Q46T Q46U Q46V Q46W Q4FQ Q4WC Q57G Q5OJ Q5SV
+calm badSound goodSound
+carpentry Q512 Q5C5 Q62B Q62D Q694 Q697
+casting Q5UY
+chainltg Q57L Q5HT Q5NQ
+chainltgbase Q57L Q5HT Q5NQ
+chaosguild lockLevel
+cityguard Q57A
+comcrystal Q454 Q535 Q55T charges
+comprobe Q56Q recipient
+comreceiver lockLevel
+cov1_gas_trap_daemon Q5DQ Q5XX trapLocation
+cov3_spike_master Q468
+cov3_spike_slave Q468
+curseatk Q472 Q688
+daemtrap victim
+darttrap Q4GO Q4VS Q5DE Q5XS Q68C poisoned
+dec1_brazier_sum Q492
+dec_orbmaster Q5GL
+dec_orbslave Q5GM Q5GO
+decounselor num
+decounselor2 num
+defbonus1 Q4H7
+defbonus2 Q4H7
+defbonus3 Q4H7
+defbonus4 Q4H7
+defbonus5 Q4H7
+des1_ankh_user Q5MY Q5MZ
+des_gas_trap Q4VS
+dmill Q5NG lockLevel
+dragonai Q420 Q421 Q494 Q49P Q4DJ Q4VS Q57H Q57M dragon there victim
+dramaticentrance Q62D
+dsmith Q5NG lockLevel
+dtailor Q5NG lockLevel
+duperfind Q5AC Q5AE Q5AM
+dye Q66O
+earthquk Q488 count
+earthqukbase Q488 count
+ef_trig Q4W8
+entice Q5VJ badSound goodSound
+enticepathfind enticed enticer
+escort Q48N Q4DE Q4O7 Q4O8 Q65M
+exploson Q57L Q57M Q5NQ
+explosonbase Q57L Q57M Q5NQ
+femaleplatemail Q4HY
+ff_trig Q4W8
+find Q4QN Q5E0
+findmobile Q4QN Q5E0
+fireball Q57L Q57M Q5NQ
+fireballbase Q57L Q57M Q5NQ
+fishing Q686
+flamespurt Q4PQ Q5FI
+flamstrk Q57L Q57M Q5NQ
+flamstrkbase Q57L Q57M Q5NQ
+flourmill Q66W
+gasspurt Q4R7 Q5FI
+gm Q59L Q5M8 Q5OI guildName
+guard Q5HE Q5NG Q68M guardFromAttack guardFromProximity guardFromUse guardList lockLevel myGuardReaction myPatrolDistance
+guildbase lockLevel
+guilddeed Q4QV Q4UM Q55H Q5NG lockLevel myHome
+guilded me
+harbormaster lockLevel
+hidesk where
+hitfball Q57L Q57M Q5NQ
+hitltng Q57L Q57M Q5NQ
+horse Q54C Q5F7 Q5HE Q5HZ Q5NG Q68M guardFromAttack guardFromProximity guardFromUse guardList lockLevel myGuardReaction myPatrolDistance petAckSfx petRefuseSfx
+housecmds Q5NG lockLevel
+housedecay Q4H2 lockLevel
+housedeed Q5NG lockLevel
+housedeedmiller Q5NG lockLevel
+housedeedsmith Q5NG lockLevel
+housedeedthieftrain Q5NG lockLevel
+housedeedweaptrain Q5NG lockLevel
+housedeedweaver Q5NG lockLevel
+housedoor Q5NG lockLevel
+houseindoor Q5NG lockLevel
+houseindoor2 Q5NG lockLevel
+housekey Q5NG lockLevel
+housesign Q5NG lockLevel
+housestuff Q5NG lockLevel
+human Q5M8 Q5OI
+human_funcs Q5M8
+incite Q5VJ attacker badSound goodSound
+inscribe Q43Q Q4NI Q4P4 Q4PF Q4QW Q56M Q5QM Q5RM Q5T7 Q5U9 Q5V0 Q61M Q62D finished
+jailcheck Q5M6
+key Q65M
+keyring lockLevel
+kwdteleporter keyword range toLocation
+l1floortrigger Q5DQ
+lbguard Q4YU Q5YH
+lbshrine Q5T1
+lightng Q57L Q57M Q5NQ
+lightngbase Q57L Q57M Q5NQ
+lock_it lockLevel
+lockdown Q5NG lockLevel
+magarrow Q57L Q57M Q5NQ
+magarrowbase Q57L Q57M Q5NQ
+mageclue Q453 Q46H Q46I Q4VK Q4VL Q4XY Q5YF Q5YG marker subject
+magehat Q4N4 Q66A
+magepuzzle Q4WE Q4WF Q4WG Q4WH Q5HH Q5HI Q5HJ Q5HK Q5JJ Q5JK subject
+magicitem Q5HU
+makingarrows feathers shafts
+mapmaking Q60G
+mastercrier Q641
+masterguildstone guilds
+meteor Q57L Q5HT
+meteorbase Q57L Q5HT
+mgtp_use power
+mindblst Q57H Q57L Q57M Q5NQ
+mindblstbase Q57H Q57L Q57M Q5NQ
+multidecay Q4H2 lockLevel
+multistuff lockLevel
+nonhuman Q5U6
+nrgybolt Q57L Q57M Q5NQ
+nrgyboltbase Q57L Q57M Q5NQ
+nrgyvrtx Q4E1
+nrgyvrtxbase Q4E1
+old_human Q5M8 Q5OI
+opengate Q4OG Q5FU
+oracle Q4FN
+orderchaos Q4YU Q5YH
+orderguild lockLevel
+pathtest Q485
+pet Q54C Q5F7 Q5HE Q5HZ Q5NG Q68M guardFromAttack guardFromProximity guardFromUse guardList lockLevel myGuardReaction myPatrolDistance petAckSfx petRefuseSfx
+platemail Q4HY
+player lockLevel
+poisoned Q42Y Q4FG Q4R0 Q5JF strength
+poisonsk Q5H9 Q5JG Q5VJ
+polychec Q4MY
+polymrph Q59T Q62D picking
+polymrphbase Q62D picking
+portcullis Q4W1 Q4YE
+potion Q463 Q4NC Q5VX
+prisoner Q5L1 Q5L2 Q67O
+quest Q5DN Q5EN Q5M8
+quest_deliver_asker Q59I Q59U Q59W Q5M8
+quest_deliver_dest Q59U Q5M8
+quest_fetch_asker Q59N Q59U Q59V Q59W Q5M8
+quest_general_funcs Q5M8
+quest_murder_asker Q59W Q5A3 Q5M8
+quest_murder_victim Q59S Q5M8
+recall Q5G6 caster
+recallbase Q5G6 caster
+reminvis where
+sawtrap Q5DE Q5OF Q5XS Q68C
+sha_boulder Q59J
+sha_boulder_two Q59J
+sha_door_one_switch_one Q4N2 Q5DQ
+sha_gas_switch_one Q5DQ trapLocation
+shepherdscrook Q46A animal
+shipclaim Q43W Q58A Q5NG Q65T lockLevel
+shipdecay Q4H2 lockLevel
+shipdeed Q43W Q58A Q5NG Q65T lockLevel
+shiphold Q43W Q58A Q5NG Q65T lockLevel
+shipleftplank Q43W Q49K Q49L Q58A Q5NG Q65T lockLevel
+shipplank Q43W Q49K Q49L Q58A Q5NG Q65T lockLevel
+shiprightplank Q43W Q49K Q49L Q58A Q5NG Q65T lockLevel
+shipstuff Q43W Q58A Q5NG Q65T lockLevel
+shiptillerman Q43W Q464 Q4V5 Q55D Q58A Q5BA Q5NG Q5SC Q5SI Q5ST Q65T lockLevel
+shrine Q5T1
+shuttleofthread Q66W
+sparkler dest fuel state
+spellai Q42U Q42V Q42W Q42X Q453 Q48D Q4AP Q52U Q559 Q55A Q564 Q56P Q59M Q59X Q5UX Q5XJ Q63K Q63S
+spiketrap Q4VS Q5DE Q5V3 Q5XS Q68C
+spiritual Q5Z3
+tailor Q55M Q55N Q55S Q5C5 Q5UA Q5UC Q62D
+tailorbase Q4H8
+tame Q487 Q5YI
+telecheck Q4VQ Q58C Q68D where
+tilesets Q45U Q4AS Q4IF Q4IG Q4IP Q4IQ Q4NM Q4Q9 Q4QA Q4QB Q4QC Q4QD Q4QE Q4QF Q4U5 Q4U6 Q4U7 Q4U8 Q4U9 Q4UA Q51C Q51D Q51E Q51F Q51G Q51H Q51I Q52C Q54H Q583 Q584 Q585 Q586 Q587 Q588 Q589 Q5O8 Q5O9 Q5OA Q5OB Q5OC Q5TX Q5TY Q5TZ Q5U0 Q5U1 Q5U2 Q5U3 Q5VG Q5VK Q5XP Q5XQ Q5Y3 Q647 Q686
+tinker Q4YZ Q512 Q55M Q55O Q55S Q5C5 Q5NG Q5UC Q62D Q65Q Q68R lockLevel
+towncrier Q4F4 Q63X gm
+tracking Q5FB
+trap_locklevel_all lockLevel
+trap_locklevel_eight lockLevel
+trap_locklevel_five lockLevel
+trap_locklevel_four lockLevel
+trap_locklevel_nine lockLevel
+trap_locklevel_one lockLevel
+trap_locklevel_seven lockLevel
+trap_locklevel_six lockLevel
+trap_locklevel_ten lockLevel
+trap_locklevel_three lockLevel
+trap_locklevel_two lockLevel
+trap_statue Q5W8
+trap_wall_face Q64Q
+tutranger Q4XI Q5YX
+tutsage Q45U Q4AS Q4IF Q4IG Q4IP Q4IQ Q4NM Q4Q9 Q4QA Q4QB Q4QC Q4QD Q4QE Q4QF Q4U5 Q4U6 Q4U7 Q4U8 Q4U9 Q4UA Q51C Q51D Q51E Q51F Q51G Q51H Q51I Q52C Q54H Q56Y Q583 Q584 Q585 Q586 Q587 Q588 Q589 Q5O8 Q5O9 Q5OA Q5OB Q5OC Q5TX Q5TY Q5TZ Q5U0 Q5U1 Q5U2 Q5U3 Q5VG Q5VK Q5XP Q5XQ Q5Y3 Q647 Q686 Q6A6 Q6A7 Q6A8 Q6A9 sword
+tutwisp Q49J Q529 Q52E Q52H Q54D Q54E Q54F Q54I Q5F1 Q5FN Q5FQ Q5GI Q5GK Q5GT Q5HA Q5MI state
+useonfball Q57L Q57M Q5NQ
+useonltng Q57L Q57M Q5NQ
+useonmarrw Q57L Q57M Q5NQ
+vendordeed Q5NG lockLevel
+virtueguild lockLevel
+vortexai Q4E1 Q4G9 Q5CC Q5CD Q67K Q67L Q67S trackee
+wearagil Q4HZ Q4YI Q5X6
+wearbless Q4HZ Q4YI Q5X6
+wearclmsy Q4HZ Q4YI Q5X6
+wearcunn Q4HZ Q4YI Q5X6
+wearcurse Q4HZ Q4YI Q5X6
+wearfblmd Q4HZ Q4YI Q5X6
+wearlight Q5FY
+wearstat Q4HZ Q4YI Q5X6
+wearstrgth Q4HZ Q4YI Q5X6
+wearweak Q4HZ Q4YI Q5X6
+werewolf Q646
+wpnspeed Q463 Q5VX

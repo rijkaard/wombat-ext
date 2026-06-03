@@ -253,9 +253,17 @@ async function compileFile(
   sdbPath: string
 ): Promise<CompileResult> {
   return new Promise(resolve => {
-    const args = ['-sdb', sdbPath, '-update-sdb', sdbPath, '-o', dstPath, srcPath];
-    cp.execFile(compilerPath, args, (err, _stdout, stderr) => {
-      resolve({ file: path.basename(srcPath), ok: !err, stderr: stderr.trim() });
+        const compilerDir: string = path.dirname(compilerPath);
+        const args = [
+            '-sdb', sdbPath,
+            '-update-sdb', sdbPath,
+            '-o', dstPath,
+	          '-enums', compilerDir + '/enumerations.h',
+	          '-enum-annots', compilerDir + '/enum-annotations.txt',
+            srcPath
+        ];
+        cp.execFile(compilerPath, args, (err, _stdout, stderr) => {
+          resolve({ file: path.basename(srcPath), ok: !err, stderr: stderr.trim() });
     });
   });
 }
