@@ -1,5 +1,5 @@
 
-.PHONY: all compiler extension package clean
+.PHONY: all compiler extension package install clean
 
 # Build everything: C compiler first, then the VS Code extension
 all: compiler extension
@@ -16,6 +16,10 @@ extension:
 # Create the .vsix package (runs bundle + vsce package)
 package: compiler extension
 	npm run package
+
+install:
+	code --uninstall-extension uo-june98.wombat-ext
+	code --install-extension ./wombat-ext-0.1.0.vsix
 
 clean:
 	$(MAKE) -C compiler clean
