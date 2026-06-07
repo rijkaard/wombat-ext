@@ -47,12 +47,13 @@
  * Never overwrites the input file.
  */
 
-import { readFileSync, writeFileSync, openSync, writeSync, closeSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, openSync, writeSync, closeSync, existsSync, readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join, basename, extname } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DEFAULT_RENAMES = join(__dirname, 'wombat-interpret/renames.json');
+const DEFAULT_RENAMES        = join(__dirname, '../wombat-interpret/renames.json');
+const DEFAULT_WOMBAT_SCRIPTS = join(__dirname, '../rundir/scripts.wombat');
 
 // ─── argument parsing ────────────────────────────────────────────────────────
 
@@ -65,12 +66,13 @@ Usage:
   node convert-dynamics.mjs --self-test [opts] <dynamic0.mul>
 
 Options:
-  --renames <path>   renames.json (default: ./wombat-interpret/renames.json)
-  --idx <path>       paired index file (default: auto-detected)
-  --out-data <path>  output data file
-  --out-idx  <path>  output index file
-  --inverse          names → Q-codes
-  --verbose / -v     print each substitution
+  --renames <path>         renames.json (default: ../wombat-interpret/renames.json)
+  --wombat-scripts <path>  wombat source dir for inheritance (default: ../rundir/scripts.wombat)
+  --idx <path>             paired index file (default: auto-detected)
+  --out-data <path>        output data file
+  --out-idx  <path>        output index file
+  --inverse                names → Q-codes
+  --verbose / -v           print each substitution
 `);
     process.exit(1);
 }
@@ -78,6 +80,7 @@ Options:
 function parseArgs(argv) {
     const opts = {
         renames:       DEFAULT_RENAMES,
+        womScripts:    DEFAULT_WOMBAT_SCRIPTS,
         idx:           null,
         outData:       null,
         outIdx:        null,
@@ -89,14 +92,15 @@ function parseArgs(argv) {
     };
     for (let i = 0; i < argv.length; i++) {
         const a = argv[i];
-        if      (a === '--renames')        opts.renames       = argv[++i];
-        else if (a === '--idx')            opts.idx           = argv[++i];
-        else if (a === '--out-data')       opts.outData       = argv[++i];
-        else if (a === '--out-idx')        opts.outIdx        = argv[++i];
-        else if (a === '--inverse')        opts.inverse       = true;
-        else if (a === '--verify-inverse') opts.verifyInverse = true;
-        else if (a === '--self-test')      opts.selfTest      = true;
-        else if (a === '--verbose' || a === '-v') opts.verbose = true;
+        if      (a === '--renames')          opts.renames    = argv[++i];
+        else if (a === '--wombat-scripts')   opts.womScripts = argv[++i];
+        else if (a === '--idx')              opts.idx        = argv[++i];
+        else if (a === '--out-data')         opts.outData    = argv[++i];
+        else if (a === '--out-idx')          opts.outIdx     = argv[++i];
+        else if (a === '--inverse')          opts.inverse       = true;
+        else if (a === '--verify-inverse')   opts.verifyInverse = true;
+        else if (a === '--self-test')        opts.selfTest      = true;
+        else if (a === '--verbose' || a === '-v') opts.verbose  = true;
         else if (a.startsWith('-')) { console.error(`Unknown option: ${a}`); usage(); }
         else opts.inputs.push(a);
     }
@@ -130,6 +134,44 @@ function writeIndex(entries, path) {
         buf.writeInt32LE(entries[i].extra, i * 12 + 8);
     }
     writeFileSync(path, buf);
+}
+
+// ─── inheritance map ─────────────────────────────────────────────────────────
+
+// Build a Map<scriptName, ancestorName[]> by reading "inherits X;" lines from
+// plain-text Wombat source files in scriptsDir.
+// The ancestor list is ordered closest-first (direct parent first).
+// Returns an empty Map if scriptsDir doesn't exist.
+function buildInheritanceMap(scriptsDir) {
+    if (!existsSync(scriptsDir)) {
+        process.stderr.write(`Warning: wombat scripts dir not found: ${scriptsDir}\n`);
+        return new Map();
+    }
+
+    const directParent = new Map();
+    for (const file of readdirSync(scriptsDir)) {
+        if (!file.endsWith('.m')) continue;
+        const scriptName = file.slice(0, -2);
+        const content = readFileSync(join(scriptsDir, file), 'utf8');
+        const m = content.match(/\binherits\s+(\w+)\s*;/);
+        if (m) directParent.set(scriptName, m[1]);
+    }
+
+    // Expand to full ancestor chains (memoized DFS).
+    const ancestors = new Map();
+    function getAncestors(name, seen = new Set()) {
+        if (ancestors.has(name)) return ancestors.get(name);
+        if (seen.has(name)) return [];          // cycle guard
+        seen.add(name);
+        const parent = directParent.get(name);
+        if (!parent) { ancestors.set(name, []); return []; }
+        const chain = [parent, ...getAncestors(parent, seen)];
+        ancestors.set(name, chain);
+        return chain;
+    }
+    for (const name of directParent.keys()) getAncestors(name);
+
+    return ancestors;
 }
 
 // ─── rename map construction ─────────────────────────────────────────────────
@@ -207,7 +249,8 @@ function buildMaps(renamesPath, verbose) {
 // Invert both maps for --inverse mode.
 //   invScrMap: "scriptname.humanName" → Qxxxx
 //   invVarMap: humanName → Qxxxx (first-wins)
-function invertMaps({ scrMap, varMap }) {
+// ancestorChains is forwarded unchanged — inheritance is the same in both directions.
+function invertMaps({ scrMap, varMap, ancestorChains }) {
     const invScrMap = new Map();
     for (const [key, newName] of scrMap) {
         // key = "scriptname.Qxxxx"
@@ -222,7 +265,7 @@ function invertMaps({ scrMap, varMap }) {
         if (!invVarMap.has(name)) invVarMap.set(name, qCode);
     }
 
-    return { scrMap: invScrMap, varMap: invVarMap };
+    return { scrMap: invScrMap, varMap: invVarMap, ancestorChains };
 }
 
 // ─── per-block transformation ────────────────────────────────────────────────
@@ -311,12 +354,14 @@ function skipValue(str, pos, type3) {
 // Format (from dynamic.c serialisation):
 //   wom_scr=<scriptname> <count> [<type3> <varname> <value_tokens>…]…
 //
-// scrMap key is "scriptname.varname" — so renaming is scoped per script:
-//   renames.json "poisonsk.Q5JG" → "poison_potion" is only applied inside
-//   "wom_scr=poisonsk …", not in any other script's entry.
+// Lookup order for each varname:
+//   1. "scriptname.varname" in scrMap (own definition)
+//   2. "ancestor.varname" for each ancestor in chain (inherited definitions)
+// This handles cases like wom_scr=4217 where 4217 inherits tailorbase, so
+// "tailorbase.Q4H8" in scrMap is found and applied to the 4217 entry.
 //
 // Returns a new string if any varname was renamed, or null if unchanged.
-function processWomScr(str, scrMap, verbose) {
+function processWomScr(str, scrMap, ancestorChains, verbose) {
     if (!str.startsWith('wom_scr=')) return null;
     let p = 8; // after "wom_scr="
 
@@ -326,6 +371,9 @@ function processWomScr(str, scrMap, verbose) {
     const scriptName = str.slice(p, nameEnd);
     let result = str.slice(0, nameEnd + 1); // "wom_scr=<name> "
     p = nameEnd + 1;
+
+    // Pre-compute lookup chain: [scriptName, ...ancestors]
+    const chain = ancestorChains ? (ancestorChains.get(scriptName) || []) : [];
 
     // Variable count
     let countEnd = str.indexOf(' ', p);
@@ -345,16 +393,26 @@ function processWomScr(str, scrMap, verbose) {
         result += str.slice(p, typeEnd + 1);
         p = typeEnd + 1;
 
-        // Varname token — look up "scriptname.varname" in scrMap
+        // Varname token — look up in scrMap, trying scriptName then each ancestor
         let varnameEnd = str.indexOf(' ', p);
         if (varnameEnd < 0) break;
         const varname = str.slice(p, varnameEnd);
-        const newName = scrMap.get(`${scriptName}.${varname}`);
+
+        let newName = scrMap.get(`${scriptName}.${varname}`);
+        let matchedContext = scriptName;
+        if (!newName) {
+            for (const ancestor of chain) {
+                const v = scrMap.get(`${ancestor}.${varname}`);
+                if (v) { newName = v; matchedContext = ancestor; break; }
+            }
+        }
+
         if (newName && newName !== varname) {
             result += newName + ' ';
             modified = true;
             if (verbose) process.stdout.write(
-                `  wom_scr ${scriptName}:${varname} → ${newName}\n`);
+                `  wom_scr ${scriptName}:${varname} → ${newName}` +
+                (matchedContext !== scriptName ? ` (via ${matchedContext})` : '') + '\n');
         } else {
             result += str.slice(p, varnameEnd + 1);
         }
@@ -377,7 +435,7 @@ function processWomScr(str, scrMap, verbose) {
 //   (forward: Q-code → name; inverse: name → Q-code).
 // Returns the original Buffer unchanged if no substitution was made (no alloc).
 // Otherwise returns a new Buffer (may be larger or smaller).
-function transformBlock(block, { scrMap, varMap }, verbose) {
+function transformBlock(block, { scrMap, varMap, ancestorChains }, verbose) {
     let pos      = 0;
     let modified = false;
     const parts  = [];
@@ -405,7 +463,7 @@ function transformBlock(block, { scrMap, varMap }, verbose) {
                     }
                 }
             } else if (str.startsWith('wom_scr=')) {
-                const newStr = processWomScr(str, scrMap, verbose);
+                const newStr = processWomScr(str, scrMap, ancestorChains, verbose);
                 if (newStr !== null) {
                     parts.push(Buffer.from(newStr + '\0', 'latin1'));
                     modified = true;
@@ -626,7 +684,10 @@ const opts = parseArgs(process.argv.slice(2));
 if (opts.inputs.length === 0) usage();
 
 const maps = buildMaps(opts.renames, opts.verbose);
-console.log(`Loaded ${maps.scrMap.size} script-scoped + ${maps.varMap.size} flat mappings from ${opts.renames}\n`);
+const ancestorChains = buildInheritanceMap(opts.womScripts);
+maps.ancestorChains = ancestorChains;
+console.log(`Loaded ${maps.scrMap.size} script-scoped + ${maps.varMap.size} flat mappings from ${opts.renames}`);
+console.log(`Loaded ${ancestorChains.size} script inheritance chains from ${opts.womScripts}\n`);
 
 // ── verify-inverse ────────────────────────────────────────────────────────────
 if (opts.verifyInverse) {
